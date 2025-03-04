@@ -21,6 +21,7 @@ class TitleLayerBackgroundPainter extends TitleLayerPainter {
       style: TextStyle(
         fontSize: fmtoOptions.textSize,
         fontWeight: isBoldText ? FontWeight.bold : FontWeight.normal,
+        fontFamily: fmtoOptions.fontFamily,
         foreground: Paint()
           ..style = PaintingStyle.stroke
           ..strokeWidth = 3
