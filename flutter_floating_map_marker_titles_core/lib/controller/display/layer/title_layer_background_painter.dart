@@ -24,10 +24,10 @@ class TitleLayerBackgroundPainter extends TitleLayerPainter {
         fontSize: fmtoOptions.textSize,
         fontFamily: fontFamily,
         fontWeight: isBoldText ? FontWeight.bold : FontWeight.normal,
-        foreground: Paint()
-          ..style = PaintingStyle.stroke
-          ..strokeWidth = 3
-          ..color = TitleLayerPainter.computeBgColorForTextColor(textColor),
+        // foreground: Paint()
+        //   ..style = PaintingStyle.stroke
+        //   ..strokeWidth = 3
+        //   ..color = TitleLayerPainter.computeBgColorForTextColor(textColor),
       ),
       text: textString,
     );
