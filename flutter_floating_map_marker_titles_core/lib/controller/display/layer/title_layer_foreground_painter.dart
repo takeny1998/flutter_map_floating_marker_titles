@@ -20,6 +20,7 @@ class TitleLayerForegroundPainter extends TitleLayerPainter {
     return TextSpan(
       style: TextStyle(
         fontSize: fmtoOptions.textSize,
+        fontFamily: fmtoOptions.fontFamily,
         color: textColor,
         fontWeight: isBoldText ? FontWeight.bold : FontWeight.normal,
       ),
