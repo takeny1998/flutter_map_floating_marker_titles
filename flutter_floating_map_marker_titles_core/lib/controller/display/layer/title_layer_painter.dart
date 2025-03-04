@@ -46,6 +46,9 @@ abstract class TitleLayerPainter {
       textDirection: TextDirection.ltr,
       maxLines: _fmtoOptions.maxTitleLines,
       ellipsis: '...',
+      strutStyle: StrutStyle(
+        fontFamily: _fmtoOptions.fontFamily,
+      ),
     );
     textPainter.layout(maxWidth: _fmtoOptions.maxTitlesWidth);
     return textPainter;

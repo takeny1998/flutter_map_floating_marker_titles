@@ -20,8 +20,8 @@ class TitleLayerBackgroundPainter extends TitleLayerPainter {
     return TextSpan(
       style: TextStyle(
         fontSize: fmtoOptions.textSize,
-        fontWeight: isBoldText ? FontWeight.bold : FontWeight.normal,
         fontFamily: fmtoOptions.fontFamily,
+        fontWeight: isBoldText ? FontWeight.bold : FontWeight.normal,
         foreground: Paint()
           ..style = PaintingStyle.stroke
           ..strokeWidth = 3
