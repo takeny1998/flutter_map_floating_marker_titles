@@ -20,6 +20,8 @@ class FloatingMarkerTitleInfo {
   /// z-index of the title to specify which title has the most priority for display in case of titles collisions
   final int zIndex;
 
+  final String? fontFamily;
+
   FloatingMarkerTitleInfo({
     required this.id,
     required this.latLng,
@@ -27,5 +29,6 @@ class FloatingMarkerTitleInfo {
     required this.color,
     this.isBold = false,
     this.zIndex = 1,
+    this.fontFamily,
   });
 }

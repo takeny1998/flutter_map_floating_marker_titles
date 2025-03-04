@@ -8,6 +8,7 @@ class TitleLayerForegroundPainter extends TitleLayerPainter {
     super.textColor,
     super.isBoldText,
     super.fmtoOptions,
+    super._fontFamily,
   );
 
   @override
@@ -16,11 +17,12 @@ class TitleLayerForegroundPainter extends TitleLayerPainter {
     final Color textColor,
     final bool isBoldText,
     final FMTOOptions fmtoOptions,
+    final String? fontFamily,
   ) {
     return TextSpan(
       style: TextStyle(
         fontSize: fmtoOptions.textSize,
-        fontFamily: fmtoOptions.fontFamily,
+        fontFamily: fontFamily,
         color: textColor,
         fontWeight: isBoldText ? FontWeight.bold : FontWeight.normal,
       ),

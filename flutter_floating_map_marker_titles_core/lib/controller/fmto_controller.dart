@@ -57,8 +57,6 @@ class FMTOOptions {
   /// Titles placement option with anchor and margin
   final FloatingMarkerPlacementPolicy titlePlacementPolicy;
 
-  final String? fontFamily;
-
   const FMTOOptions({
     this.repaintIntervalMillis = 16,
     this.textSize = 14.0,
@@ -70,7 +68,6 @@ class FMTOOptions {
     this.titlesToCheckPerFrame = 30,
     this.fadeInAnimationTimeMillis = 300,
     this.titlePlacementPolicy = const FloatingMarkerPlacementPolicy(FloatingMarkerGravity.right, 12),
-    this.fontFamily,
   });
 }
 
@@ -248,6 +245,7 @@ class FMTOController {
       floatingMarkerTitleInfo.color,
       floatingMarkerTitleInfo.isBold,
       fmtoOptions,
+      floatingMarkerTitleInfo.fontFamily,
     );
     final Offset viewCoordinates = _mapViewInterface.latLngToViewCoordinates(
       floatingMarkerTitleInfo.latLng,

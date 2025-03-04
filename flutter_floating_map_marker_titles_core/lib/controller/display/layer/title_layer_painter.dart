@@ -14,6 +14,8 @@ abstract class TitleLayerPainter {
   final String _textString;
   final Color _textColor;
   final bool _isBoldText;
+  final String? _fontFamily;
+
   final FMTOOptions _fmtoOptions;
 
   late TextPainter _textPainter;
@@ -23,6 +25,7 @@ abstract class TitleLayerPainter {
     this._textColor,
     this._isBoldText,
     this._fmtoOptions,
+    this._fontFamily,
   ) {
     _textPainter = _buildTextPainter();
   }
@@ -32,6 +35,7 @@ abstract class TitleLayerPainter {
     final Color textColor,
     final bool isBoldText,
     final FMTOOptions fmtoOptions,
+    final String? fontFamily,
   );
 
   TextPainter _buildTextPainter() {
@@ -41,13 +45,14 @@ abstract class TitleLayerPainter {
         _textColor,
         _isBoldText,
         _fmtoOptions,
+        _fontFamily,
       ),
       textAlign: TextAlign.left,
       textDirection: TextDirection.ltr,
       maxLines: _fmtoOptions.maxTitleLines,
       ellipsis: '...',
       strutStyle: StrutStyle(
-        fontFamily: _fmtoOptions.fontFamily,
+        fontFamily: _fontFamily,
       ),
     );
     textPainter.layout(maxWidth: _fmtoOptions.maxTitlesWidth);

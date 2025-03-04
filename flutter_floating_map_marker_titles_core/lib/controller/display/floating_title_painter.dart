@@ -13,10 +13,11 @@ class FloatingTitlePainter {
     final Color textColor,
     final bool isBoldText,
     final FMTOOptions fmtoOptions,
+    final String? fontFamily,
   ) {
     return FloatingTitlePainter._internal(
-      _createBGPainter(textString, textColor, isBoldText, fmtoOptions),
-      _createFGPainter(textString, textColor, isBoldText, fmtoOptions),
+      _createBGPainter(textString, textColor, isBoldText, fmtoOptions,fontFamily ),
+      _createFGPainter(textString, textColor, isBoldText, fmtoOptions, fontFamily),
     );
   }
 
@@ -30,12 +31,14 @@ class FloatingTitlePainter {
     final Color textColor,
     final bool isBoldText,
     final FMTOOptions fmtoOptions,
+    final String? fontFamily,
   ) {
     return TitleLayerBackgroundPainter(
       textString,
       textColor,
       isBoldText,
       fmtoOptions,
+      fontFamily,
     );
   }
 
@@ -44,12 +47,14 @@ class FloatingTitlePainter {
     final Color textColor,
     final bool isBoldText,
     final FMTOOptions fmtoOptions,
+    final String? fontFamily,
   ) {
     return TitleLayerForegroundPainter(
       textString,
       textColor,
       isBoldText,
       fmtoOptions,
+      fontFamily,
     );
   }
 

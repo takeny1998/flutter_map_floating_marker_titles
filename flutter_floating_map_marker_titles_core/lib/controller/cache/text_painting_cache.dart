@@ -7,6 +7,8 @@ class _TextPaintingCacheKey {
   final String textString;
   final Color textColor;
   final bool isBoldText;
+    final String? fontFamily;
+
   final FMTOOptions options;
 
   _TextPaintingCacheKey(
@@ -14,6 +16,7 @@ class _TextPaintingCacheKey {
     this.textColor,
     this.isBoldText,
     this.options,
+    this.fontFamily,
   );
 
   @override
@@ -51,6 +54,7 @@ class _TextPaintingCacheImpl extends CachedCalculator<_TextPaintingCacheKey, Flo
       key.textColor,
       key.isBoldText,
       key.options,
+      key.fontFamily,
     );
   }
 }
@@ -71,6 +75,7 @@ class TextPaintingCache {
     final Color textColor,
     final bool isBoldText,
     final FMTOOptions options,
+    final String? fontFamily,
   ) {
     return _paintersCache.getValue(
       _TextPaintingCacheKey(
@@ -78,6 +83,7 @@ class TextPaintingCache {
         textColor,
         isBoldText,
         options,
+        fontFamily,
       ),
     );
   }
